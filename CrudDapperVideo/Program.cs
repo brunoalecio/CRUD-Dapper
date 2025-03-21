@@ -9,7 +9,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Nossas configurações
 builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
+builder.Services.AddAutoMapper(typeof(Program));
+
 
 var app = builder.Build();
 
