@@ -16,6 +16,32 @@ namespace CrudDapperVideo.Services
             _mapper = mapper;
         }
 
+        public async Task<ResponseModel<UsuarioListarDto>> BuscarUsuarioPorId(int usuarioId)
+        {
+            ResponseModel<UsuarioListarDto> response = new ResponseModel<UsuarioListarDto>();
+
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                var usuarioBanco = await connection.QueryFirstOrDefaultAsync<Usuario>("SELECT * FROM Usuarios WHERE ID = @Id", new { Id = usuarioId });
+                
+                if (usuarioBanco == null)
+                {
+                    response.Mensagem = "Nenhum usuário localizado";
+                    response.Status = false;
+                    return response;
+                }
+
+                //Mapear UsuarioBanco -> UsuarioListarDto
+                var usuarioMapeado = _mapper.Map<UsuarioListarDto>(usuarioBanco);
+
+                response.Dados = usuarioMapeado;
+                response.Mensagem = "Usuário localizado com sucesso!";
+                response.Status = true;
+            }
+
+            return response;    
+        }
+
         //Buscar todos usuários
         public async Task<ResponseModel<List<UsuarioListarDto>>> BuscarUsuarios()
         {

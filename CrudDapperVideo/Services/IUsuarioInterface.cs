@@ -6,5 +6,7 @@ namespace CrudDapperVideo.Services
     public interface IUsuarioInterface
     {
         public Task<ResponseModel<List<UsuarioListarDto>>> BuscarUsuarios();
+
+        public Task<ResponseModel<UsuarioListarDto>> BuscarUsuarioPorId(int usuarioId);
     }
 }

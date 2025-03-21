@@ -31,5 +31,18 @@ namespace CrudDapperVideo.Controllers
         }
 
 
+        [HttpGet("{usuarioId}")]
+        public async Task<IActionResult> BuscarUsuarioPorId(int usuarioId)
+        {
+            var usuario = await _usuarioInterface.BuscarUsuarioPorId(usuarioId);
+
+            if (usuario.Status == false)
+            {
+                return NotFound(usuario);
+
+            }
+
+            return Ok(usuario);
+        }
     }
 }
