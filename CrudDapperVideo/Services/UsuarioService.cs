@@ -16,6 +16,7 @@ namespace CrudDapperVideo.Services
             _mapper = mapper;
         }
 
+        //Buscar usuários por ID
         public async Task<ResponseModel<UsuarioListarDto>> BuscarUsuarioPorId(int usuarioId)
         {
             ResponseModel<UsuarioListarDto> response = new ResponseModel<UsuarioListarDto>();
@@ -71,6 +72,44 @@ namespace CrudDapperVideo.Services
 
                 return response;
             }
+        }
+
+
+        //Criar usuário
+        public async Task<ResponseModel<List<UsuarioListarDto>>> CriarUsuario(UsuarioCriarDto usuarioCriarDto)
+        {
+            ResponseModel<List<UsuarioListarDto>> response = new ResponseModel<List<UsuarioListarDto>>();
+
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                //Comando SQL para Criar usuário no banco
+                var usuarioCriado = await connection.ExecuteAsync("INSERT INTO USUARIOS (NomeCompleto, Email, Cargo, Salario, CPF, Situacao, Senha)" +
+                    "                                                            VALUES (@NomeCompleto, @Email, @Cargo, @Salario, @CPF, @Situacao, @Senha)", usuarioCriarDto);
+                
+                if (usuarioCriado == 0)
+                {
+                    response.Mensagem = "Nenhum usuário foi criado";
+                    response.Status = false;
+                    return response;
+                }
+
+                var usuariosBanco = await ListarUsuarios(connection);
+
+                var usuariosMapeados = _mapper.Map<List<UsuarioListarDto>>(usuariosBanco);
+
+                response.Dados = usuariosMapeados;
+                response.Mensagem = "Usuário criado com sucesso!";
+                response.Status = true;
+
+                return response;
+
+            }
+        }
+        
+        private static async Task<IEnumerable<Usuario>> ListarUsuarios(SqlConnection connection)
+        {
+            var usuariosBanco = await connection.QueryAsync<Usuario>("SELECT * FROM USUARIOS");
+            return usuariosBanco;
         }
     }
 }

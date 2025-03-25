@@ -11,6 +11,22 @@
   },
   {
     "ContainingType": "CrudDapperVideo.Controllers.UsuarioController",
+    "Method": "CriarUsuario",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioCriarDto",
+        "Type": "CrudDapperVideo.Dto.UsuarioCriarDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CrudDapperVideo.Controllers.UsuarioController",
     "Method": "BuscarUsuarioPorId",
     "RelativePath": "api/Usuario/{usuarioId}",
     "HttpMethod": "GET",

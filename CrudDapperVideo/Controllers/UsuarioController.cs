@@ -1,4 +1,6 @@
-﻿using CrudDapperVideo.Services;
+﻿using CrudDapperVideo.Dto;
+using CrudDapperVideo.Models;
+using CrudDapperVideo.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -44,5 +46,23 @@ namespace CrudDapperVideo.Controllers
 
             return Ok(usuario);
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> CriarUsuario(UsuarioCriarDto usuarioCriarDto)
+        {
+
+            var usuarios = await _usuarioInterface.CriarUsuario(usuarioCriarDto);
+
+            if (usuarios.Status == false)
+            {
+                return BadRequest(usuarios);
+            }
+
+            return Ok(usuarios);
+
+        }
+
     }
 }
+

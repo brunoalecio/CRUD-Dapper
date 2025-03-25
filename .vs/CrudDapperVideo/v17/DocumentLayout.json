@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Projetos\\CrudDapperVideo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|c:\\projetos\\cruddappervideo\\cruddappervideo\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|solutionrelative:cruddappervideo\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|c:\\projetos\\cruddappervideo\\cruddappervideo\\dto\\usuariocriardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|solutionrelative:cruddappervideo\\dto\\usuariocriardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|c:\\projetos\\cruddappervideo\\cruddappervideo\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|solutionrelative:cruddappervideo\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|c:\\projetos\\cruddappervideo\\cruddappervideo\\services\\iusuariointerface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|solutionrelative:cruddappervideo\\services\\iusuariointerface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|c:\\projetos\\cruddappervideo\\cruddappervideo\\dto\\usuariolistardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25732E4C-9228-44EC-AF3A-D2150FB28373}|CrudDapperVideo\\CrudDapperVideo.csproj|solutionrelative:cruddappervideo\\dto\\usuariolistardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "CrudDapperVideo\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "CrudDapperVideo\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCYAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T22:05:19.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUsuarioInterface.cs",
-              "DocumentMoniker": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Services\\IUsuarioInterface.cs",
-              "RelativeDocumentMoniker": "CrudDapperVideo\\Services\\IUsuarioInterface.cs",
-              "ToolTip": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Services\\IUsuarioInterface.cs",
-              "RelativeToolTip": "CrudDapperVideo\\Services\\IUsuarioInterface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T21:33:43.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Services\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "CrudDapperVideo\\Services\\UsuarioService.cs",
-              "ToolTip": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Services\\UsuarioService.cs",
-              "RelativeToolTip": "CrudDapperVideo\\Services\\UsuarioService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwCMAAAAAAAAAAAAAAA==",
+              "Title": "UsuarioCriarDto.cs",
+              "DocumentMoniker": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Dto\\UsuarioCriarDto.cs",
+              "RelativeDocumentMoniker": "CrudDapperVideo\\Dto\\UsuarioCriarDto.cs",
+              "ToolTip": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Dto\\UsuarioCriarDto.cs",
+              "RelativeToolTip": "CrudDapperVideo\\Dto\\UsuarioCriarDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T20:51:14.185Z",
+              "WhenOpened": "2025-03-24T21:05:10.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioListarDto.cs",
+              "DocumentMoniker": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Dto\\UsuarioListarDto.cs",
+              "RelativeDocumentMoniker": "CrudDapperVideo\\Dto\\UsuarioListarDto.cs",
+              "ToolTip": "C:\\Projetos\\CrudDapperVideo\\CrudDapperVideo\\Dto\\UsuarioListarDto.cs",
+              "RelativeToolTip": "CrudDapperVideo\\Dto\\UsuarioListarDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T21:04:29.243Z",
               "EditorCaption": ""
             }
           ]
