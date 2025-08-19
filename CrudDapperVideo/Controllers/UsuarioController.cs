@@ -63,6 +63,19 @@ namespace CrudDapperVideo.Controllers
 
         }
 
+        [HttpPut]
+        public async Task<IActionResult> EditarUsuario(UsuarioEditarDto usuarioEditarDto)
+        {
+
+            var usuariosBanco = await _usuarioInterface.EditarUsuario(usuarioEditarDto);
+
+            if (usuariosBanco.Status == false)
+            {
+                return BadRequest(usuariosBanco);
+            }
+
+            return Ok(usuariosBanco);
+        }
     }
 }
 

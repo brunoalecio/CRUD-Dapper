@@ -111,5 +111,35 @@ namespace CrudDapperVideo.Services
             var usuariosBanco = await connection.QueryAsync<Usuario>("SELECT * FROM USUARIOS");
             return usuariosBanco;
         }
+
+
+        public async Task<ResponseModel<List<UsuarioListarDto>>> EditarUsuario(UsuarioEditarDto usuarioEditarDto)
+        {
+            ResponseModel<List<UsuarioListarDto>> response = new ResponseModel<List<UsuarioListarDto>>();
+
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+
+                var usuarioEditado = await connection.ExecuteAsync("UPDATE USUARIOS SET NomeCompleto = @NomeCompleto, Email = @Email, Cargo = @Cargo, Salario = @Salario, CPF = @CPF, Situacao = @Situacao WHERE Id = @Id", usuarioEditarDto);
+
+                if (usuarioEditado == 0)
+                {
+                    response.Mensagem = "Erro ao editar Usuário";
+                    response.Status = false;
+                    return response;
+                }
+
+                var usuariosBanco = await ListarUsuarios(connection);
+
+                var usuariosMapeados = _mapper.Map<List<UsuarioListarDto>>(usuariosBanco);
+
+                response.Dados = usuariosMapeados;
+                response.Mensagem = "Usuario editado com sucesso!";
+                response.Status = true;
+
+                return response;
+
+            }
+        }
     }
 }
